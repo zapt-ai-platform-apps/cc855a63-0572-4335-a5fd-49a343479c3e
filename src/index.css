@@ -1,3 +1,109 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-gray-50 text-gray-800;
+}
+
+.btn {
+  @apply px-4 py-2 font-medium rounded-md transition-colors cursor-pointer;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-700 hover:bg-gray-300;
+}
+
+.btn-danger {
+  @apply bg-red-600 text-white hover:bg-red-700;
+}
+
+.btn-sm {
+  @apply px-2 py-1 text-sm;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-md p-4;
+}
+
+.input {
+  @apply px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent box-border;
+}
+
+.select {
+  @apply px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent box-border;
+}
+
+.toggle {
+  @apply relative inline-flex items-center cursor-pointer;
+}
+
+.toggle-input {
+  @apply sr-only;
+}
+
+.toggle-slider {
+  @apply w-11 h-6 bg-gray-300 rounded-full transition-colors;
+}
+
+.toggle-slider::before {
+  content: '';
+  @apply absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform;
+}
+
+.toggle-input:checked + .toggle-slider {
+  @apply bg-blue-600;
+}
+
+.toggle-input:checked + .toggle-slider::before {
+  @apply transform translate-x-5;
+}
+
+.spinner {
+  @apply animate-spin h-5 w-5 text-white;
+}
+
+.tooltip {
+  @apply relative;
+}
+
+.tooltip-text {
+  @apply invisible absolute z-10 w-32 bg-gray-900 text-white text-center rounded-md py-2 px-3 bottom-full left-1/2 -translate-x-1/2 mb-1 text-xs;
+}
+
+.tooltip:hover .tooltip-text {
+  @apply visible;
+}
+
+.comic-text-bubble {
+  @apply relative;
+}
+
+.comic-text-bubble--original {
+  @apply absolute inset-0 z-10;
+}
+
+.comic-text-bubble--translated {
+  @apply absolute inset-0 z-20;
+}
+
+.text-highlight {
+  @apply bg-yellow-200 px-1 py-0.5 rounded;
+}
+
+/* Customized scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded hover:bg-gray-400;
+}
